@@ -50,8 +50,5 @@ body:
         ```
       placeholder: |
         [정답]
-        
-        [풀이]
 
-      validations:
-        required: true
+        [풀이]
