@@ -41,20 +41,6 @@ body:
       required: true
 
   - type: textarea
-    id: answer
-    attributes:
-      label: 정답
-      description: 정답을 작성하세요.
-      placeholder: |
-        예) 
-        1
-        4
-        2
-        3
-    validations:
-      required: true
-
-  - type: textarea
     id: solution
     attributes:
       label: 풀이
