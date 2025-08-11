@@ -1,54 +1,64 @@
-name: "📚 퀴즈 풀이 인증"
-description: "퀴즈 문제에 대한 풀이 인증용 이슈 템플릿입니다."
-title: "[풀이 인증] 문제 번호 - 문제 제목"
-labels:
-  - quiz
-  - 풀이인증
+name: 📚 퀴즈 풀이 인증
+description: 퀴즈 문제에 대한 풀이 인증용 이슈 템플릿입니다.
+labels: [quiz, 풀이인증]
 body:
-  - type: markdown
+  - type: input
+    id: problem-number
     attributes:
-      value: |
-        ## 📚 문제 정보
-        - **문제 번호:** <!-- 예: 5 -->
-        - **문제 제목:** <!-- 예: Promise 순서 맞추기 -->
-        - **문제 링크:** <!-- 예: https://quiz-site.com/problem/5 -->
-        - **난이도:** <!-- 예: ⭐⭐ -->
+      label: 문제 번호
+      description: 문제 번호를 입력하세요.
+      placeholder: 예) 1234
+    validations:
+      required: true
 
-  - type: markdown
+  - type: input
+    id: problem-title
     attributes:
-      value: |
-        ## 📄 문제 설명
-        <!-- 문제에 대한 간단한 설명을 작성해주세요 -->
+      label: 문제 제목
+      description: 문제 제목을 입력하세요.
+      placeholder: 예) Promise 실행 순서
+    validations:
+      required: true
 
-  - type: markdown
+  - type: input
+    id: problem-link
     attributes:
-      value: "---"
+      label: 문제 링크
+      description: 문제 링크를 입력하세요.
+      placeholder: 예) https://www.acmicpc.net/problem/1234
+    validations:
+      required: true
 
-  - type: markdown
+  - type: dropdown
+    id: difficulty
     attributes:
-      value: |
-        ### 💬 풀이 인증 방법
-        1. 이슈 댓글에 풀이 인증 캡처 첨부
-        2. 정답 및 풀이 과정 간단히 작성
+      label: 난이도
+      options:
+        - 쉬움
+        - 보통
+        - 어려움
+    validations:
+      required: true
+
+  - type: textarea
+    id: answer
+    attributes:
+      label: 정답
+      description: 정답을 작성하세요.
+      placeholder: |
+        예) 
+        1
+        4
+        2
+        3
+    validations:
+      required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: "풀이 및 정답 작성"
-      description: |
-        풀이 과정과 정답을 아래 형식에 맞춰 작성해주세요.
-
-        ```
-        [정답]  
-        예) 1  
-        4  
-        2  
-        3  
-
-        [풀이]  
-        예) Promise then은 microtask queue에서 실행되므로...
-        ```
-      placeholder: |
-        [정답]
-
-        [풀이]
+      label: 풀이
+      description: 풀이 과정을 간단히 작성하세요.
+      placeholder: 예) Promise then은 microtask queue에서 실행되므로…
+    validations:
+      required: true
