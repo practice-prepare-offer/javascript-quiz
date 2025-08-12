@@ -43,8 +43,8 @@ body:
   - type: textarea
     id: solution
     attributes:
-      label: 풀이
-      description: 풀이 과정을 간단히 작성하세요.
+      label: 문제
+      description: 문제 내용
       placeholder: 예) Promise then은 microtask queue에서 실행되므로…
     validations:
       required: true
