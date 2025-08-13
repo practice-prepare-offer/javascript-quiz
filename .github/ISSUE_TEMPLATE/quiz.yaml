@@ -3,40 +3,11 @@ description: 퀴즈 문제에 대한 풀이 인증용 이슈 템플릿입니다.
 labels: [quiz, 풀이인증]
 body:
   - type: input
-    id: problem-number
-    attributes:
-      label: 문제 번호
-      description: 문제 번호를 입력하세요.
-      placeholder: 예) 1234
-    validations:
-      required: true
-
-  - type: input
-    id: problem-title
-    attributes:
-      label: 문제 제목
-      description: 문제 제목을 입력하세요.
-      placeholder: 예) Promise 실행 순서
-    validations:
-      required: true
-
-  - type: input
     id: problem-link
     attributes:
       label: 문제 링크
       description: 문제 링크를 입력하세요.
       placeholder: 예) https://www.acmicpc.net/problem/1234
-    validations:
-      required: true
-
-  - type: dropdown
-    id: difficulty
-    attributes:
-      label: 난이도
-      options:
-        - 쉬움
-        - 보통
-        - 어려움
     validations:
       required: true
 
